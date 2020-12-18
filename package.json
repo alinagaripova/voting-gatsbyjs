@@ -18,10 +18,16 @@
   "dependencies": {
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
+    "antd": "3.26.0",
+    "bootstrap": "^4.5.3",
     "gatsby": "^2.26.1",
     "gatsby-plugin-mdx": "^1.7.0",
+    "gatsby-plugin-sass": "^2.8.0",
     "gatsby-source-filesystem": "^2.8.0",
     "gatsby-transformer-remark": "^2.13.0",
+    "lodash": "^4.17.20",
+    "node-sass": "4.14.1",
+    "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   }

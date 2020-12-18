@@ -1,0 +1,48 @@
+.text-block {
+	padding: $blockPadding 0;
+
+	&__body {
+		&::before,
+		&::after {
+			content: "";
+			display: block;
+			clear: both;
+		}
+	}
+
+	&__image {
+		width: 100%;
+		@include media-breakpoint-up(md) {
+			width: 50%;
+		}
+		img {
+			width: 100%;
+		}
+	}
+
+	&__title {
+		margin-bottom: step(2.5);
+
+		&_text-center {
+			text-align: center;
+		}
+
+		&_anzac {
+			// color: $anzac;
+		}
+	}
+
+	&__description {
+		margin-bottom: #{$blockPadding / 2};
+		padding: 0 step(0.5);
+		hyphens: auto;
+		-webkit-hyphens: auto;
+		-moz-hyphens: auto;
+		-ms-hyphens: auto;
+
+		img {
+			width: 100%;
+			max-width: 100%;
+		}
+	}
+}

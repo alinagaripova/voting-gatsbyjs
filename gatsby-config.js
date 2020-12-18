@@ -1,17 +1,22 @@
 module.exports = {
-  siteMetadata: {
-    title: "voting-gatsby",
-  },
-  plugins: [
-    "gatsby-transformer-remark",
-    "gatsby-plugin-mdx",
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "pages",
-        path: "./src/pages/",
-      },
-      __key: "pages",
+    siteMetadata: {
+        title: "voting-gatsby",
+        mainPage: "/",
     },
-  ],
-};
+    plugins: [
+        {
+            resolve: "gatsby-source-filesystem",
+            options: {
+                name: "src",
+                path: `${__dirname}/src/`,
+            },
+        },
+        `gatsby-transformer-remark`,
+        {
+            resolve: "gatsby-plugin-sass",
+            options: {
+                data: '@import "./src/styles/common.scss";',
+            },
+        },
+    ],
+}

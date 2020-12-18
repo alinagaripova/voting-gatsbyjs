@@ -1,0 +1,130 @@
+@import "./vendor";
+@import "./functions/step";
+
+$step: .5rem;
+$blockPadding: step(7.5);
+
+//colors
+$mainColor: #04283a;
+$textColor: #04283a;
+$accentColor: cornflowerblue;
+$mainBackgroundColor: #e1eff2;
+
+html,
+body {
+    height: 100%;
+    font-size: 16.8px;
+    //font-family: $mainFontFamily;
+    color: $textColor;
+    background-color: $mainBackgroundColor;
+
+    @include media-breakpoint-up(lg) {
+        margin: 0;
+        outline-color: none;
+        padding: 0;
+        touch-action: manipulation;
+    }
+}
+
+h1,
+.h1 {
+    font-size: step(3.1);
+    line-height: step(4.25);
+
+    @include media-breakpoint-up(md) {
+        font-size: step(3.6);
+        line-height: step(4.75);
+    }
+    @include media-breakpoint-up(lg) {
+        font-size: step(4.1);
+        line-height: step(5.25);
+    }
+
+    @include media-breakpoint-up(xl) {
+        font-size: step(5.1);
+        line-height: step(6.25);
+    }
+
+
+}
+
+h2,
+.h2 {
+    font-size: step(3.1);
+    line-height: step(4.25);
+
+    @include media-breakpoint-up(md) {
+        font-size: step(3.6);
+        line-height: step(4.75);
+    }
+
+    @include media-breakpoint-up(lg) {
+        font-size: step(4.1);
+        line-height: step(5.25);
+    }
+
+    @include media-breakpoint-up(xl) {
+        font-size: step(5.1);
+        line-height: step(6.25);
+    }
+}
+
+h3,
+.h3 {
+
+    font-size: step(3.1);
+    line-height: step(4);
+
+    @include media-breakpoint-up(xl) {
+        font-size: step(4.1);
+        line-height: step(5);
+    }
+}
+
+h4,
+.h4 {
+    font-size: step(2.7);
+    line-height: step(3);
+    @include media-breakpoint-up(lg) {
+        font-size: step(3.1);
+        line-height: step(4);
+    }
+}
+
+h5,
+.h5 {
+    font-size: step(2.1);
+    line-height: step(3);
+
+    @include media-breakpoint-up(lg) {
+        font-size: step(2.6);
+        line-height: step(3);
+    }
+
+    &-md {
+        @include media-breakpoint-up(lg) {
+            font-size: step(3.1);
+            line-height: step(4);
+        }
+    }
+}
+
+h6,
+.h6 {
+    font-size: step(1.8);
+    line-height: step(2);
+}
+
+ul {
+    li,
+    ol {
+        list-style: none;
+    }
+}
+
+.text {
+    font-size: step(2.1);
+    line-height: step(3);
+    text-align: justify;
+}
+
