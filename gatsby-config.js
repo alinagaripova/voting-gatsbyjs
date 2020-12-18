@@ -1,4 +1,5 @@
 module.exports = {
+    pathPrefix: "/voting-gatsbyjs",
     siteMetadata: {
         title: "voting-gatsby",
         mainPage: "/",
