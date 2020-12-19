@@ -4,6 +4,7 @@ import { get } from "lodash";
 
 import { ContentBlock } from "../components/Blocks/ContentBlock";
 import Contents from "../components/Contents";
+import VotingTabs from "../components/Voting/Tabs";
 
 export const query = graphql`
     query {
@@ -48,7 +49,7 @@ export const query = graphql`
 export default function Main({data}) {
 
     const votingData =  get(data, "allMarkdownRemark.edges[0].node.frontmatter");
-    const { title, content_blocks } = votingData;
+    const { title, content_blocks, stages } = votingData;
 
     return (
         <>
@@ -62,7 +63,9 @@ export default function Main({data}) {
             </ContentBlock>
             <ContentBlock key={"voting-content"}>
                 <div className={"container"}>
-                    {/*<VotingTabs items={stages} jury={jury}/>*/}
+                    <VotingTabs
+                        items={stages}
+                    />
                 </div>
             </ContentBlock>
         </>

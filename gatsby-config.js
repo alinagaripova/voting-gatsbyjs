@@ -18,5 +18,12 @@ module.exports = {
                 data: '@import "./src/styles/common.scss";',
             },
         },
+        {
+            resolve: "gatsby-plugin-less",
+            options: {
+                data: '@import "./src/styles/antd.less";',
+                javascriptEnabled: true,
+            },
+        },
     ],
 }

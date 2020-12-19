@@ -7,7 +7,7 @@ import { TextBlockMedia, TextBlock } from "../Blocks";
 export default function Contents({ items }) {
     return items.map(({ title, body, media, type }, idx) => {
         const src = get(media, "items[0].src", "")
-        switch (get(media, "type", "default")) {
+        switch (type) {
             case "Media":
                 return (
                     <TextBlockMedia

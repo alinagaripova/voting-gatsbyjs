@@ -3,11 +3,11 @@ import PropTypes from "prop-types";
 import { Tabs } from "antd";
 import { get } from "lodash";
 
-// import Stage from "../Stage";
+import Stage from "../Stage";
 
 const { TabPane } = Tabs;
 
-export default function VotingTabs({ items, jury }) {
+export default function VotingTabs({ items }) {
     return (
         <Tabs
             size={"large"}
@@ -15,12 +15,16 @@ export default function VotingTabs({ items, jury }) {
         >
             {
                 items.map((item, idx) => {
+                    console.log(idx)
                     return (
                         <TabPane
                             tab={get(item, "stage_name", "")}
                             key={idx}
+                            disabled={idx === 3}
                         >
-                            {/*<Stage item={item} jury={jury}/>*/}
+                            <Stage
+                                item={item}
+                            />
                         </TabPane>
                     );
                 })
@@ -31,9 +35,7 @@ export default function VotingTabs({ items, jury }) {
 
 VotingTabs.propTypes = {
     items: PropTypes.array,
-    jury: PropTypes.array,
 };
 VotingTabs.defaultProps = {
     items: [],
-    jury: [],
 };

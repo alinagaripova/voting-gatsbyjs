@@ -8,7 +8,7 @@ $blockPadding: step(7.5);
 $mainColor: #04283a;
 $textColor: #04283a;
 $accentColor: cornflowerblue;
-$mainBackgroundColor: #e1eff2;
+$mainBackgroundColor: #f5f6f6;
 
 html,
 body {
@@ -126,5 +126,9 @@ ul {
     font-size: step(2.1);
     line-height: step(3);
     text-align: justify;
+}
+
+img {
+    object-fit: contain !important;
 }
 

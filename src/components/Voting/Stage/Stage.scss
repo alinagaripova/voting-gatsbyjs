@@ -1,0 +1,51 @@
+.stage {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	@include media-breakpoint-up(lg) {
+		flex-wrap: nowrap;
+	}
+
+	&__info {
+
+		&_name {
+			font-size: 50px;
+			opacity: 0.5;
+
+			@include media-breakpoint-up(lg) {
+				font-size: 100px;
+			}
+		}
+
+		&_date {
+			opacity: 0.5;
+		}
+	}
+
+	&__state {
+		display: flex;
+		border-radius: 50px;
+		border: 2px solid;
+		width: fit-content;
+
+		&_item {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		&_icon {
+			margin: -2px;
+			width: step(7);
+			height: step(7);
+			border-radius: 50px;
+			background-color: $mainColor;
+		}
+
+		&_title {
+			font-size: 16px;
+			padding: 16px 32px;
+		}
+	}
+}
